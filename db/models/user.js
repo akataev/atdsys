@@ -1,7 +1,8 @@
-﻿var mongoose = require('mongoose'),
+﻿var mongoose = require('../mongoose'),
     Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 var crypto = require('crypto');
+
 
 var schema = new Schema({
     username: {
@@ -43,5 +44,6 @@ schema.virtual('password')
 schema.methods.checkPassword = function (password) {
     return this.encryptPassword(password) === this.hashedPassword;
 };
+
 
 exports.User = mongoose.model('User', schema);
