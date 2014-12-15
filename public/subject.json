@@ -1,0 +1,9 @@
+{
+	image: "https://www.google.com/images/srpr/logo11w.png",
+	title: "Администрирование информационных систем",
+	faculty: "Математический",
+	department: "ИМО",
+	lecturer: "Константинопольский Константин Константинович",
+	fofstudy: "ИСИТ", //field of study === название специальности/направления/магистратуры
+	group: "22505"
+}

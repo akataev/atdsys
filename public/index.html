@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>ver2</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<link rel="stylesheet" type="text/css" href="css-libs/font-awesome.min.css" />
+	</head>
+
+	<body>
+
+		<div id="testRouting">
+			<p>Test Routing</p>
+			<a href="#subject123/">showSubject/</a><br>
+			<a href="#error/">error/</a><br>
+			<a href="">clear/</a>
+		</div>
+
+		<div class="page-container">
+
+			<div class="header">
+				<div class="left-menu">
+					<div class="fa fa-bars fa-lg"></div>
+					<ul id="profile_menu">
+						<li><a href="">Мой профиль</a></li>
+						<li><a href="">Выйти из системы</a></li>
+					</ul>
+					<span class="profile-name">Константин Константинопольский</span>
+			    </div>
+		        <form action="">
+				    <input type="text" placeholder="Поиск..." pattern="^[А-Яа-яЁё\s0-9]+$" />
+				    <button type="submit"><i class="fa fa-search fa-lg"></i></button>
+				</form>
+			</div>
+
+		    <div class="left-sidebar">
+				<div class="some-info">
+					<script type="text/html" id="subject_template">
+					    <img class="entity-img" src="{{image}}" alt="Изображение">
+						<div class="entity-info">
+							<p class="entity-title"> {{title}} </p>
+							<p class="entity-property faculty">
+								<span class="span-left">Факультет:</span> 
+								<a class="badge" href="#"> {{faculty}} </a>	</p>
+							<p class="entity-property department">
+								<span class="span-left">Кафедра:</span>
+								<a class="badge" href="#"> {{department}} </a>	</p>
+							<p class="entity-property lecturer">
+								<span class="span-left">Преподаватель:</span> <a class="badge" href="#"> {{lecturer}} </a></p>
+							<p class="entity-property fofstudy">
+								<span class="span-left">Специальность:</span> <a class="badge" href="#"> {{fofstudy}} </a></p>
+							<p class="entity-property group">
+								<span class="span-left">Группа:</span> <a class="badge" href="#"> {{group}} </a></p>
+						</div>
+					</script>
+				<!-- <img class="entity-img" src="" alt="Изображение" />
+				<div class="entity-info">
+					<p class="entity-title">Администрирование корпоративных систем</p>
+					<p class="entity-property faculty">Факультет: <a class="badge" href="#">Математический</a></p>
+					<p class="entity-property department">Кафедра: <a class="badge" href="#">ИМО</a></p>
+					<p class="entity-property lecturer">Преподаватель: <a class="badge" href="#">Константинопольский Константин Константинович</a></p>
+					<p class="entity-property specialty">Специальность: <a class="badge" href="#">ИСиТ</a></p>
+					<p class="entity-property group">Группа: <a class="badge" href="#">22506</a></p>
+				</div> -->
+				</div>
+				<div class="some-data">
+					<table class="display" cellspacing="0" width="100%">
+						<thead>
+							<th class="t-header">
+								<span href="" class="fa fa-th-list fa-lg" title="Показать сводную таблицу"></span><span class="table-title" title="Сортировать"> Даты занятий </span><span href="" class="fa fa-pencil fa-lg" title="Редактировать список"></span><span href="" class="fa fa-plus fa-lg" title="Добавить новое занятие"></span>
+							</th>
+						</thead>
+						<tbody>
+							<script type="text/html" id="table_template">
+								<tr>
+									<td><span class="date"> {{day}} {{month}} {{year}} </span><span class="fa fa-chevron-right"></span></td>
+								</tr>
+							</script>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+	 	    <div class="right-sidebar">
+				<div class="right-inner">
+					<p class="stat-title">Статистика группы <span class="stat-group">22406</span></p>
+					<p class="stat-property">Общая посещаемость предмета:</p>
+					<img type="image/png" class="gen-stat-img" src="images/bacbac.gif" alt="График посещаемости" title="График посещаемости" />
+					<p class="stat-property">Средняя посещаемость: <span class="av-att">75.8%</span></p>
+					<p class="stat-property">Макс. явка: <span class="max-att">1 сен 2014 года</span></p>
+					<p class="stat-property">Мин. явка: <span class="min-att">2 сен 2014 года</span></p>
+				</div>
+			</div>
+
+		    <div class="footer">
+				<a href="http://petrsu.ru">Сайт ПетрГУ</a>
+				<a href="#feedback">Обратная связь</a>
+				<p>&copy; ПетрГУ, 2014</p>
+			</div>
+
+		</div>
+
+
+
+
+		<!--<script type="text/javascript" src="js-libs/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js-libs/backbone-min.js"></script>
+		<script type="text/javascript" src="js-libs/underscore-min.js"></script>-->
+
+		<script type="text/javascript" src="js-libs/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js-libs/underscore-1.7.0.js"></script>
+		<script type="text/javascript" src="js-libs/backbone-1.1.2.js"></script>
+
+		<script type="text/javascript" src="js-libs/icanhaz.js"></script>
+		<script type="text/javascript" src="js-libs/tables/jquery.dataTables.min.js"></script>
+
+		<script type="text/javascript" src="main.js"></script>
+
+	</body>
+
+</html>
